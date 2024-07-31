@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.csoon::after{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    padding-top: 15px;
+    font-size: x-small;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    content: "Coming Soon ...";
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+    
+    
+}
+
+.secondarycolor{
+    background-color: #343B68;
+}
+
+.primarycolor{
+    background-color: #0B1124;
+}

@@ -1,0 +1,1 @@
+user=%7B%22id%22%3A106852820%2C%22first_name%22%3A%22S-Kheirkhah%22%2C%22last_name%22%3A%22%22%2C%22username%22%3A%22s_kheirkhah%22%2C%22language_code%22%3A%22en%22%2C%22allows_write_to_pm%22%3Atrue%7D&chat_instance=146776223792350967&chat_type=private&auth_date=1722404442&hash=169f97018364b259a26d03401f67cf429b7e7a0d4d023d116b5d022744ff14db
