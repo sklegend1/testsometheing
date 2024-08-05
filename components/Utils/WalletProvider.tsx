@@ -8,7 +8,7 @@ const WalletProvider = ({
     children: React.ReactNode;
   }) =>{
     return (
-      <TonConnectUIProvider manifestUrl="https://qmwmfwdl-3000.uks1.devtunnels.ms/tonconnect-manifest.json/"
+      <TonConnectUIProvider manifestUrl="https://testsometheing.vercel.app/tonconnect-manifest.json/"
       walletsListConfiguration={{
         includeWallets: [
           {
