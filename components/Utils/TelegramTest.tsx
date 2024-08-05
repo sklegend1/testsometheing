@@ -92,9 +92,9 @@ const TelegramTest = () => {
         {/* <button className="mt-3 mx-auto p-1 bg-blue-300 text-black font-bold rounded-full"
         onClick={()=>{twaTest();}}> </button> */}
         {/* <p className=" text-white ">{response}</p> */}
-        {/* <Button onClick={sendData} variant="gradient" color="blue">
+        <Button onClick={sendData} variant="gradient" color="blue">
             Test PourGhavam Response
-        </Button> */}
+        </Button>
             <Button onClick={handleOpen} variant="gradient" color="blue">
             Test Telegram Response
         </Button>
