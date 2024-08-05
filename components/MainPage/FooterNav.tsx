@@ -1,7 +1,9 @@
+
 import Link from "next/link";
 import Image from "next/image";
-
+import { useTranslations } from "next-intl";
 const FooterNav = () => {
+    const t = useTranslations('NavFooter')
     return (
         <nav className=" fixed bottom-0 secondarycolor w-full h-[100px] grid grid-cols-3 content-center text-center">
             <Link href="/" className=" ">
@@ -13,7 +15,7 @@ const FooterNav = () => {
                     className="max-h-[45px] mx-auto"
                 
                 />
-                <h2 className=" text-gray-500 text-sm  mt-1">Wallet</h2>
+                <h2 className=" text-gray-500 text-sm  mt-1">{t('Wallet')}</h2>
             </Link>
             <Link href="/" className=" ">
             <Image 
@@ -24,7 +26,7 @@ const FooterNav = () => {
                     className="max-h-[45px] mx-auto"
                 
                 />
-                <h2 className=" text-white text-sm  mt-1">Home</h2>
+                <h2 className=" text-white text-sm  mt-1">{t('Home')}</h2>
             </Link>
             <Link href="/" className=" ">
             <Image 
@@ -35,7 +37,7 @@ const FooterNav = () => {
                     className="max-h-[45px] mx-auto"
                 
                 />
-                <h2 className=" text-gray-500 text-sm  mt-1">Ranking</h2>
+                <h2 className=" text-gray-500 text-sm  mt-1">{t('Ranking')}</h2>
             </Link>
 
 

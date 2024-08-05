@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
 
@@ -7,6 +8,7 @@ interface CardProps  {
     title:string,
     description:string,
     image:string
+    link:string
     extra?:string
 }
 
@@ -22,6 +24,7 @@ const OffchainItemCard = (props:CardProps ) => {
     }
 
     return (
+        <Link href={props.link}>
         <div className={" overflow-hidden relative secondarycolor  max-w-[92%] aspect-[6/2] pb-[2px] w-[44vw] mx-auto my-1 rounded-lg grid grid-cols-2   "+props.extra+tapEffect}
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
@@ -41,6 +44,7 @@ const OffchainItemCard = (props:CardProps ) => {
                 <p className=" text-[1.9vw] leading-3 mt-[2px] max-w-full overflow-hidden  ">{props.description}</p>
             </div>
         </div>
+        </Link>
     );
 }
 
