@@ -25,7 +25,7 @@ const OffchainItemCard = (props:CardProps ) => {
 
     return (
         <Link href={props.link}>
-        <div className={" overflow-hidden relative secondarycolor  max-w-[92%] aspect-[6/2] pb-[2px] w-[44vw] mx-auto my-1 rounded-lg grid grid-cols-2   "+props.extra+tapEffect}
+        <div className={" overflow-hidden relative secondarycolor  max-w-[92%] aspect-[6/2] pb-[2px] w-[45vw] mx-auto my-1 rounded-lg grid grid-cols-2   "+props.extra+tapEffect}
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
         >

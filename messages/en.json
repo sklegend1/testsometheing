@@ -4,5 +4,23 @@
         "Home":"Home",
         "Ranking":"Ranking"
 
+    },
+    "Home":{
+        "OffTitle":"Offchain",
+        "OnTitle":"Onchain",
+        "Challenges":"Challenges",
+        "Tasks":"Tasks",
+        "Refferals":"Refferals",
+        "Manual":"Manual",
+        "ChallengesDes":"Play mini games and earn points",
+        "TasksDes":"Complete the tasks to earn points",
+        "RefferalsDes":"Invite your friends and earn point",
+        "ManualDes":"Read White Paper , Learn more about Pixi",
+        "CSoon":"Coming Soon ...",
+        "Points":"Points",
+        "PixiTokens":"Pixi Tokens",
+        "PixiPTokens":"PixiP Tokens",
+        "ConnectWallet":"Connect TON Wallet"
+
     }
 }

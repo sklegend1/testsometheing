@@ -1,8 +1,24 @@
 {
-    "NavFooter":{
-        "Wallet":"Кошелек",
-        "Home":"Дом",
-        "Ranking":"Рейтинг"
-
+    "NavFooter": {
+        "Wallet": "Кошелек",
+        "Home": "Домой",
+        "Ranking": "Рейтинг"
+    },
+    "Home": {
+        "OffTitle": "Офчейн",
+        "OnTitle": "Ончейн",
+        "Challenges": "Вызовы",
+        "Tasks": "Задачи",
+        "Refferals": "Приглашения",
+        "Manual": "Руководство",
+        "ChallengesDes": "Играй в мини-игры и зарабатывай очки",
+        "TasksDes": "Выполняй задачи, чтобы зарабатывать очки",
+        "RefferalsDes": "Приглашай друзей и зарабатывай очки",
+        "ManualDes": "Читай White Paper, узнай больше о Pixi",
+        "CSoon": "Скоро ...",
+        "Points": "Очки",
+        "PixiTokens": "Токены Pixi",
+        "PixiPTokens": "Токены PixiP",
+        "ConnectWallet": "Подключить кошелек TON"
     }
 }

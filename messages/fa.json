@@ -1,8 +1,24 @@
 {
-    "NavFooter":{
-        "Wallet":"کیف پول",
-        "Home":"خانه",
-        "Ranking":"رده بندی"
-
+    "NavFooter": {
+        "Wallet": "کیف پول",
+        "Home": "خانه",
+        "Ranking": "رتبه‌بندی"
+    },
+    "Home": {
+        "OffTitle": "آف‌چین",
+        "OnTitle": "آن‌چین",
+        "Challenges": "چالش‌ها",
+        "Tasks": "وظایف",
+        "Refferals": "ارجاع‌ها",
+        "Manual": "راهنما",
+        "ChallengesDes": "بازی‌ کنید و امتیاز کسب کنید",
+        "TasksDes": "وظایف را تکمیل کنید تا امتیاز کسب کنید",
+        "RefferalsDes": "دوستان خود را دعوت کنید و امتیاز کسب کنید",
+        "ManualDes": " وایت پیپر را مطالعه کنید و بیشتر درباره ما بدانید",
+        "CSoon": "به زودی ...",
+        "Points": "امتیازها",
+        "PixiTokens": "توکن‌های Pixi",
+        "PixiPTokens": "توکن‌های PixiP",
+        "ConnectWallet": "اتصال به کیف پول TON"
     }
 }
