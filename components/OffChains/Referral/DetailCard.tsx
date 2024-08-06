@@ -29,8 +29,8 @@ const DetailCard = (props:taskProps) => {
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
          >
-            <div className="w-[50px] h-[50px] p-1 ">
-                <Image src={props.img} height={45} width={45} alt="Task Image" className="w-[45px] h-[45px]  object-cover " />
+            <div className="w-[64px] h-[64px]   ">
+                <Image src={props.img} height={45} width={45} alt="Task Image" className="w-[65%]   object-cover " />
             </div>
             <div className=" ml-[4vw] col-span-3 text-left   w-[120%] h-full">
                 <h1 className=" text-white ml-2 text-[3.5vw] font-bold">{props.title}</h1>
