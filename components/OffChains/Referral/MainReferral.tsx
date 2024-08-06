@@ -14,7 +14,7 @@ interface RefProps{
 const MainReferral = (props:RefProps) => {
     const [isMoreDetails,setIsMoreDetails] = useState(false)
     return (
-        <div className=" w-[88vw]  mx-auto mt-12 text-center text-white">
+        <div className=" w-[88vw]  mx-auto mt-12 text-center text-white ">
             <h1 className=" text-4xl font-bold mb-2">{props.refCount} Referrals</h1>
             <InviteButton  />
             <div className=" secondarycolor w-[88vw] aspect-[381/104] mt-8 rounded-lg content-center">LeaderBoard Banner</div>
@@ -29,7 +29,7 @@ const MainReferral = (props:RefProps) => {
                 className={isMoreDetails?" text-gray-800 bg-blue-gray-100 w-[90%] py-1 mx-auto rounded-xl font-semibold":""}
                     >More Details</button>
             </div>
-            <div className="overflow-y-scroll h-[70%] p-3 ">
+            <div className="overflow-y-scroll  h-[70%] p-3 ">
                 {isMoreDetails?<DetailContainer />:<ReferralContainer />}
 
             </div>
