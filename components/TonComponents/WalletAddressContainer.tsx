@@ -15,7 +15,7 @@ export const WalletAddress = () => {
     useEffect(()=>{
         
         const getBalance =async () =>{
-            if(userFriendlyAddress){
+            if(true){
             try{
             const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+"UQB48gfE1mh2BSMF5Zkx1-zlU9q9ZCBGBp2L4672z1Xigo7O" , {
                 method:"GET",
