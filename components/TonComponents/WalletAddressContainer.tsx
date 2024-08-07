@@ -13,7 +13,7 @@ export const WalletAddress = () => {
     const getBalance =async () =>{
         if(userFriendlyAddress){
         try{
-        const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+userFriendlyAddress , {
+        const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+"UQB48gfE1mh2BSMF5Zkx1-zlU9q9ZCBGBp2L4672z1Xigo7O" , {
             method:"GET",
             
         })
@@ -52,7 +52,7 @@ export const WalletAddress = () => {
             </div>
             <div className='  col-span-5 text-center pl-1 text-sm '>
                 <p className=' h-8 overflow-scroll '>User-friendly address: {briefUFA}</p>
-                {/* <p className=' h-8 overflow-scroll font-bold '>Balance: {balance}</p> */}
+                <p className=' h-8 overflow-scroll font-bold '>Balance: {balance}</p>
             </div>
             
         </div>
