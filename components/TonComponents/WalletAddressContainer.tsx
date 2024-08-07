@@ -45,8 +45,8 @@ export const WalletAddress = () => {
                 >Disconnect</button>
             </div>
             <div className='  col-span-5 text-center pl-1 text-sm '>
-                <p className=' h-8 overflow-hidden '>User-friendly address: {briefUFA}</p>
-                <p className=' h-8 overflow-hidden font-bold '>Balance: {rawAddress}</p>
+                <p className=' h-8 overflow-scroll '>User-friendly address: {briefUFA}</p>
+                <p className=' h-8 overflow-scroll font-bold '>Balance: {rawAddress}</p>
             </div>
             
         </div>
