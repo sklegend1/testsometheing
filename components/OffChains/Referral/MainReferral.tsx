@@ -19,7 +19,7 @@ const MainReferral = (props:RefProps) => {
             <h1 className=" text-2xl font-bold mb-1">{props.refCount} Referrals</h1>
             <InviteButton  />
             </div>
-            <div className=" secondarycolor mx-auto w-[88vw] h-[12vh] mt-1 text-sm  grid grid-cols-2 rounded-lg ">
+            <div className=" secondarycolor mx-auto w-[88vw] min-h-[12vh] mt-2 text-sm  grid grid-cols-2 rounded-lg p-1 ">
                 <div className=" pt-1">
                     <div>Total Referrals</div>
                     <div className=" font-bold ">12 People</div>
