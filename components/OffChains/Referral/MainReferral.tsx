@@ -37,14 +37,14 @@ const MainReferral = (props:RefProps) => {
                     <div>
                     <div className="  inline-block bg-yellow-600 w-[12px] h-[12px] rounded-full
                  mx-1 shadow-[0px_0px_4px_rgba(200,200,0,0.8)] "></div>
-                 <div className=" inline-block text-white">
+                 <div className=" inline-block text-white font-bold">
                 28 Points</div>
                     </div>
                 </div>
                 
             </div>
             <div className=" mt-6 max-h-[calc(100vh-200px)]  ">
-                <div className=" fixed  bg-[#2A2F53] w-[100vw] rounded-3xl h-full pb-[110px] top-[30vh]  bottom-0 left-0 pt-4 ">
+                <div className=" fixed  bg-[#2A2F53] w-[100vw] rounded-3xl h-full pb-[110px] top-[33vh]  bottom-0 left-0 pt-4 ">
                 <div id="ReffererToggle"
             className=" mb-4 w-[85%] mt-4 grid grid-cols-2 text-gray-300 text-center py-1 secondarycolor rounded-xl mx-auto"
             >
