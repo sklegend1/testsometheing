@@ -26,7 +26,7 @@ const LeaderCardRank2 = (props:taskProps) => {
         // },50)
     }
     return (
-        <div className={" w-[88vw]  relative mx-auto bg-gradient-to-r from-[#0C1230] flex flex-row items-center from-[30%] to-[#343B68] mt-2 h-[68px] rounded-xl p-2 border-[#d4d4d4] border-2"+tapEffect}
+        <div className={" w-[88vw]  relative mx-auto bg-gradient-to-r from-[#0C1230] snap-start flex flex-row items-center from-[30%] to-[#343B68] mt-2 h-[68px] rounded-xl p-2 border-[#d4d4d4] border-2"+tapEffect}
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
          >

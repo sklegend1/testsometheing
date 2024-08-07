@@ -26,8 +26,9 @@ const ReferralCard = (props:taskProps) => {
         // },50)
     }
     return (
-        <div className={" w-[88vw] mx-auto bg-gradient-to-r from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-2 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
-            
+        <div className={" w-[88vw] mx-auto bg-gradient-to-r  snap-start from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-2 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
+            onTouchStart={tapToggle}
+            onTouchEnd={()=>setTapEffect("")}
          >
             <div className="w-[64px] h-[64px] rounded-full ">
                 <Image src={props.img} height={64} width={64} alt="Task Image" className="w-[64px] h-[64px] rounded-full object-cover " />

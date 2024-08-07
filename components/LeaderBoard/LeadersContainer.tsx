@@ -8,10 +8,10 @@ const LeadersContainer = () => {
     <div className=" scale-105 mt-6 mx-auto rounded-xl shadow-[0px_0px_10px_1px_rgba(180,180,250,0.6)] w-fit">
         <LeaderCard rank={505}
         title="Your Current Rank"
-        point={763}
+        point={75}
         img="/icons/referrals/person1.png"/>
         </div>
-        <div className="  w-full mt-2 h-[calc(60vh-100px)] overflow-y-scroll ">
+        <div className="  w-full mt-2 h-[calc(60vh-100px)] overflow-y-scroll snap-y ">
         
             <LeaderCardRank1 rank={1}
         title="Rick Novak"
