@@ -17,7 +17,7 @@ export const WalletAddress = () => {
         const getBalance =async () =>{
             if(true){
             try{
-            const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+"UQC_rlxvy4pVoVrwR2J8llHQr2DnyLUurjy3zPPkNZQVqFMt" , {
+            const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+userFriendlyAddress , {
                 method:"GET",
                 
             })
@@ -39,7 +39,7 @@ export const WalletAddress = () => {
             // const balance = getBalance()
             getBalance()
 
-    },[])
+    },[userFriendlyAddress])
     
     
     
