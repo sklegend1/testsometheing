@@ -24,7 +24,7 @@ export const WalletAddress = () => {
                 <button className=" leading-3 mt-1 text-[2vw] font-bold bg-gradient-to-r from-orange-500 to-orange-800
                 p-[6px] rounded-full
                 "
-                onClick={()=>tonCon.disconnect()}
+                onClick={()=>{tonCon.disconnect();tonCon.connector.disconnect()}}
                 >Disconnect</button>
             </div>
             <div className='  col-span-5 text-left text-xs'>

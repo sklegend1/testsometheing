@@ -1,4 +1,7 @@
 import LeaderCard from "./LeaderCard";
+import LeaderCardRank1 from "./LeaderCardRank1";
+import LeaderCardRank2 from "./LeaderCardRank2";
+import LeaderCardRank3 from "./LeaderCardRank3";
 
 const LeadersContainer = () => {
     return (<>
@@ -8,17 +11,17 @@ const LeadersContainer = () => {
         point={763}
         img="/icons/referrals/person1.png"/>
         </div>
-        <div className="  w-full mt-2 h-[40vh] overflow-y-scroll ">
+        <div className="  w-full mt-2 h-[calc(65vh-100px)] overflow-y-scroll ">
         
-            <LeaderCard rank={1}
+            <LeaderCardRank1 rank={1}
         title="Rick Novak"
         point={763}
         img="/icons/referrals/person1.png"/>
-        <LeaderCard rank={2}
+        <LeaderCardRank2 rank={2}
         title="Rick Novak"
         point={565}
         img="/icons/referrals/person2.png"/>
-        <LeaderCard rank={3}
+        <LeaderCardRank3 rank={3}
         title="Rick Novak"
         point={220}
         img="/icons/referrals/person3.png"/>

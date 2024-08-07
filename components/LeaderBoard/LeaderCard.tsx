@@ -19,7 +19,7 @@ const LeaderCard = (props:taskProps) => {
     const [tapEffect,setTapEffect] = useState("")
 
     const tapToggle =()=>{
-        setTapEffect(" shadow-[0px_0px_6px_1px_rgba(50,100,255,0.5)] scale-105 ")
+        setTapEffect(" shadow-[0px_0px_6px_1px_rgba(50,100,255,0.5)]  ")
         // window.navigator.vibrate([200])
         // setTimeout(()=>{
         //     setTapEffect("")
