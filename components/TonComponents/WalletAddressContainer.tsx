@@ -8,7 +8,7 @@ import { TonConnectUIProvider,useTonConnectUI } from "@tonconnect/ui-react"
 export const WalletAddress = () => {
     const userFriendlyAddress = useTonAddress();
     const rawAddress = useTonAddress(false);
-    const briefUFA = userFriendlyAddress.slice(0,4) +"..." + userFriendlyAddress.slice(12)
+    const briefUFA = userFriendlyAddress.slice(0,4) +"..." + userFriendlyAddress.slice(12,16)
     const [tonCon] = useTonConnectUI()
     const getBalance =async () =>{
         if(userFriendlyAddress){
@@ -18,7 +18,7 @@ export const WalletAddress = () => {
             
         })
         const data = await res.json()
-
+        console.log(data)
         if(res.status==200){
             return data.result
         }
