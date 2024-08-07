@@ -11,6 +11,8 @@ export const WalletAddress = () => {
     const briefUFA = userFriendlyAddress.slice(0,4) +"..." + userFriendlyAddress.slice(12)
     const [tonCon] = useTonConnectUI()
     const getBalance =async () =>{
+        if(userFriendlyAddress){
+        try{
         const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+userFriendlyAddress , {
             method:"GET",
             
@@ -22,7 +24,11 @@ export const WalletAddress = () => {
         }
         else{
             return "No Response"
-        }
+        }}
+        catch(error){
+            return error
+        }}
+        return "Not Connected"
     }
     const balance = getBalance()
     
