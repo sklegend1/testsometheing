@@ -20,7 +20,7 @@ export const WalletAddress = () => {
         const data = await res.json()
 
         if(res.status==200){
-            return data
+            return data.result
         }
         else{
             return "No Response"
