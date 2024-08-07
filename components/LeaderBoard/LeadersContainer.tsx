@@ -11,7 +11,7 @@ const LeadersContainer = () => {
         point={763}
         img="/icons/referrals/person1.png"/>
         </div>
-        <div className="  w-full mt-2 h-[calc(65vh-100px)] overflow-y-scroll ">
+        <div className="  w-full mt-2 h-[calc(60vh-100px)] overflow-y-scroll ">
         
             <LeaderCardRank1 rank={1}
         title="Rick Novak"
