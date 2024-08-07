@@ -2,6 +2,7 @@
 import { useTonAddress } from '@tonconnect/ui-react';
 import Image from 'next/image';
 import { TonConnectUIProvider,useTonConnectUI } from "@tonconnect/ui-react"
+import { useEffect, useState } from 'react';
 
 
     
@@ -10,27 +11,37 @@ export const WalletAddress = () => {
     const rawAddress = useTonAddress(false);
     const briefUFA = userFriendlyAddress.slice(0,4) +"..." + userFriendlyAddress.slice(12,16)
     const [tonCon] = useTonConnectUI()
-    const getBalance =async () =>{
-        if(userFriendlyAddress){
-        try{
-        const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+"UQB48gfE1mh2BSMF5Zkx1-zlU9q9ZCBGBp2L4672z1Xigo7O" , {
-            method:"GET",
-            
-        })
-        const data = await res.json()
-        console.log(data)
-        if(res.status==200){
-            return data.result
+    const [walletBalance,setWalletBalance]= useState("No Balance")
+    useEffect(()=>{
+        
+        const getBalance =async () =>{
+            if(userFriendlyAddress){
+            try{
+            const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+"UQB48gfE1mh2BSMF5Zkx1-zlU9q9ZCBGBp2L4672z1Xigo7O" , {
+                method:"GET",
+                
+            })
+            const data = await res.json()
+            console.log(data)
+            if(res.status==200){
+                setWalletBalance(data.result)
+            }
+            else{
+                setWalletBalance("No Response")
+            }}
+            catch(error){
+                setWalletBalance("We have some Errors")
+            }}
+            else{
+                setWalletBalance("Not Connected")
+            }
         }
-        else{
-            return "No Response"
-        }}
-        catch(error){
-            return error
-        }}
-        return "Not Connected"
-    }
-    const balance = getBalance()
+            // const balance = getBalance()
+            getBalance()
+
+    },[])
+    
+    
     
     return (
         userFriendlyAddress && (
@@ -52,7 +63,7 @@ export const WalletAddress = () => {
             </div>
             <div className='  col-span-5 text-center pl-1 text-sm '>
                 <p className=' h-8 overflow-scroll '>User-friendly address: {briefUFA}</p>
-                <p className=' h-8 overflow-scroll font-bold '>Balance: {balance}</p>
+                <p className=' h-8 overflow-scroll font-bold '>Balance: {walletBalance}</p>
             </div>
             
         </div>
