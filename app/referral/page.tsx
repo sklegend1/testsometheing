@@ -2,7 +2,7 @@ import MainReferral from "@/components/OffChains/Referral/MainReferral";
 
 const page = () => {
     return (
-        <div>
+        <div className=" ">
             <MainReferral refCount={15} />
         </div>
     );

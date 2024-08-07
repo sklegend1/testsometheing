@@ -6,7 +6,7 @@ import { UserPlusIcon } from "@heroicons/react/24/solid"
 interface taskProps{
     title?:string
     point?:number
-    friend?:number
+    rank?:number
     
     img:string
     img1?:string
@@ -15,7 +15,7 @@ interface taskProps{
     
 }
 
-const ReferralCard = (props:taskProps) => {
+const LeaderCard = (props:taskProps) => {
     const [tapEffect,setTapEffect] = useState("")
 
     const tapToggle =()=>{
@@ -26,22 +26,23 @@ const ReferralCard = (props:taskProps) => {
         // },50)
     }
     return (
-        <div className={" w-[88vw] mx-auto bg-gradient-to-r from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-2 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
+        <div className={" w-[88vw]  relative mx-auto bg-gradient-to-r from-[#0C1230] flex flex-row items-center from-[30%] to-[#343B68] mt-2 h-[68px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
          >
-            <div className="w-[64px] h-[64px] rounded-full ">
-                <Image src={props.img} height={64} width={64} alt="Task Image" className="w-[64px] h-[64px] rounded-full object-cover " />
+            <div className=" text-white font-body text-2xl ml-1 w-10">{props.rank}</div>
+            <div className="w-[55px] ml-1 h-[55px] rounded-full ">
+                <Image src={props.img} height={55} width={55} alt="Task Image" className="w-[55px] h-[55px] rounded-full object-cover " />
             </div>
-            <div className=" ml-[4vw] col-span-3 text-left   w-full h-full">
-                <h1 className=" text-white  text-[3.8vw] font-bold">{props.title}</h1>
-                <div className=" inline-block  " > <UserPlusIcon className=" w-5 mt-[-4px] text-green-400 inline-block" /> {props.friend} </div>
-                <div className=" inline-block w-[50%] mt-2 text-white text-center py-0  rounded-md  ">
-                <div className=" inline-block bg-yellow-600 w-[12px] h-[12px] rounded-full
+            
+                <h1 className=" text-white ml-2 w-[38%] text-[3.8vw] font-bold">{props.title}</h1>
+                
+                <div className=" absolute right-3">
+                <div className="  inline-block bg-yellow-600 w-[12px] h-[12px] rounded-full
                  mx-1 shadow-[0px_0px_4px_rgba(200,200,0,0.8)] "></div>
-                {props.point} Points
-            </div>
-            </div>
+                 <div className=" inline-block text-white">
+                {props.point} Points</div>
+                </div>
             <div className=" relative  ml-[-5vw]   ">
                 <div className="  text-left">
                     {props.img1&&
@@ -60,4 +61,4 @@ const ReferralCard = (props:taskProps) => {
     );
 }
 
-export default ReferralCard;
+export default LeaderCard;

@@ -16,7 +16,7 @@ const TaskDialog = (props:taskProps) => {
     const [verifyState,setVerifyState] = useState(0)
     const [buttonHtml,setButtonHtml] = useState(
     <button onClick={()=>{setVerifyState(1)}}
-    className=" col-span-5 mt-3 text-white font-bold text-center h-[9vw] bg-[#9AA6F6] rounded-md  ">
+    className=" col-span-5 mt-3 text-white font-bold text-center h-[12vw] bg-[#9AA6F6] rounded-md  ">
         Join
     </button>)
 
@@ -29,19 +29,19 @@ const TaskDialog = (props:taskProps) => {
       case 0:
         setButtonHtml(
         <button onClick={()=>{setVerifyState(1)}}
-         className=" col-span-5 mt-3 text-white font-bold text-center h-[9vw] bg-[#9AA6F6] rounded-md  ">
+         className=" col-span-5 mt-3 text-white font-bold text-center h-[12vw] bg-[#9AA6F6] rounded-md  ">
             Join
         </button>);
         break;
       case 1:
         setButtonHtml(
-            <button onClick={()=>{setVerifyState(2)}} className=" col-span-5 mt-3 text-white font-bold text-center h-[9vw] bg-[#029E80] rounded-md  ">
+            <button onClick={()=>{setVerifyState(2)}} className=" col-span-5 mt-3 text-white font-bold text-center h-[12vw] bg-[#029E80] rounded-md  ">
                 Verify
             </button>);
         break;
       case 2:
         setButtonHtml(
-            <button className=" col-span-5 mt-3 text-white font-bold text-center h-[9vw] bg-[#029E80] rounded-md  ">
+            <button className=" col-span-5 mt-3 text-white font-bold text-center h-[12vw] bg-[#029E80] rounded-md  ">
         <div className=" animate-spin mx-auto w-6 h-6 
         border-t-4 border-t-[#ffffff]
         border-l-4 border-l-[#ffffff7c]
@@ -58,7 +58,7 @@ const TaskDialog = (props:taskProps) => {
         case 3:
         setButtonHtml(
             <button onClick={()=>{props.isOpen()}}
-             className=" col-span-5 mt-3 text-white font-bold text-center h-[9vw] bg-[#029E80] rounded-md  ">
+             className=" col-span-5 mt-3 text-white font-bold text-center h-[12vw] bg-[#029E80] rounded-md  ">
                 <CheckCircleIcon className=" mx-auto w-6" />
             </button>);
         break;

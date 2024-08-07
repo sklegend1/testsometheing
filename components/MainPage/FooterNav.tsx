@@ -28,7 +28,7 @@ const FooterNav = () => {
                 />
                 <h2 className=" text-white text-sm  mt-1">{t('Home')}</h2>
             </Link>
-            <Link href="/" className=" ">
+            <Link href="/leaderboard" className=" ">
             <Image 
                     src="/icons/nav/Ranking.png"
                     width={25}

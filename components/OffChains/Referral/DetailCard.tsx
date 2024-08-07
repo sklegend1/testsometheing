@@ -25,7 +25,7 @@ const DetailCard = (props:taskProps) => {
         // },50)
     }
     return (
-        <div className={"  w-[45vw] mx-auto bg-gradient-to-r from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-0 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
+        <div className={"  w-[45vw] mx-auto bg-gradient-to-r from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-1 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
          >

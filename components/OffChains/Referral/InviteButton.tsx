@@ -10,7 +10,7 @@ const InviteButton = () => {
             </button>
             
         </div>
-        <p className="mt-1 text-left text-gray-400">https://t.me/pixi/ref/1222358552</p>
+        {/* <p className="mt-1 text-left text-gray-400">https://t.me/pixi/ref/1222358552</p> */}
         </div>
     );
 }
