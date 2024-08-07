@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react';
 export const WalletAddress = () => {
     const userFriendlyAddress = useTonAddress();
     const rawAddress = useTonAddress(false);
-    const briefUFA = userFriendlyAddress.slice(0,4) +"..." + userFriendlyAddress.slice(12,16)
+    const briefUFA = userFriendlyAddress.slice(0,6) +"..." + userFriendlyAddress.slice(-6)
     const [tonCon] = useTonConnectUI()
     const [walletBalance,setWalletBalance]= useState("No Balance")
     useEffect(()=>{
@@ -17,14 +17,14 @@ export const WalletAddress = () => {
         const getBalance =async () =>{
             if(true){
             try{
-            const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+"UQB48gfE1mh2BSMF5Zkx1-zlU9q9ZCBGBp2L4672z1Xigo7O" , {
+            const res = await fetch( "https://toncenter.com/api/v2/getAddressBalance?address="+userFriendlyAddress , {
                 method:"GET",
                 
             })
             const data = await res.json()
             console.log(data)
             if(res.status==200){
-                setWalletBalance(data.result)
+                setWalletBalance(data.result+" TON")
             }
             else{
                 setWalletBalance("No Response")
@@ -61,7 +61,7 @@ export const WalletAddress = () => {
                 onClick={()=>{tonCon.disconnect();tonCon.connector.disconnect()}}
                 >Disconnect</button>
             </div>
-            <div className='  col-span-5 text-center pl-1 text-sm '>
+            <div className='  col-span-5 text-center pl-1 text-sm mt-2 '>
                 <p className=' h-8 overflow-scroll '>User-friendly address: {briefUFA}</p>
                 <p className=' h-8 overflow-scroll font-bold '>Balance: {walletBalance}</p>
             </div>
