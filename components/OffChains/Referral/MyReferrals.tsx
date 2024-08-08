@@ -13,8 +13,9 @@ const MyReferrals = () => {
                     <div className=" font-bold ">5 People</div>
                 </div>
                 <div className=" col-span-2 text-lg pt-1">
-                    <div className=" text-[4vw]">
-                        <hr className=" mb-1  border-gray-600"/>
+                    {/* <hr className=" mb-1  border-gray-600"/> */}
+                    <div className=" text-[4vw]  w-[90vw] rounded-lg mx-auto border-yellow-400 border-2 bg-gradient-to-r from-[#0C1230]  from-[30%] to-[#343B68]">
+                        
                          You earned <b className=" text-yellow-500">{116}</b> Points from your referrals
                          </div>
                     {/* <div>
@@ -26,7 +27,7 @@ const MyReferrals = () => {
                     </div> */}
                 </div>
 
-                <hr className=" my-2 border-gray-600"/>
+                {/* <hr className=" my-2 border-gray-600"/> */}
                 <DetailContainer2 />
         </div>
     );
