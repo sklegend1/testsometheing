@@ -11,7 +11,7 @@ const LeadersContainer = () => {
         point={75}
         img="/icons/referrals/person1.png"/>
         </div>
-        <div onScroll={(e)=>e.stopPropagation()} className=" fixed  top-[calc(40vw+80px)] w-full mt-2 h-[calc(100svh-(40vw+200px))] overflow-y-scroll touch-auto">
+        <div onScroll={(e)=>e.preventDefault()} className=" fixed  top-[calc(40vw+80px)] w-full mt-2 h-[calc(100svh-(40vw+200px))] overflow-y-scroll touch-auto">
         
             <LeaderCardRank1 rank={1}
         title="Rick Novak"
