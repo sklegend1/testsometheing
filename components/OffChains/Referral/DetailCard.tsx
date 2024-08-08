@@ -13,6 +13,7 @@ interface taskProps{
     point?:number
     ton?:number
     nft?:number
+    count?:number
 }
 
 const DetailCard = (props:taskProps) => {
@@ -25,10 +26,15 @@ const DetailCard = (props:taskProps) => {
         // },50)
     }
     return (
-        <div className={"  w-[45vw] mx-auto snap-start bg-gradient-to-r from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-1 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
+        <div className={" relative  w-[45vw] mx-auto snap-start bg-gradient-to-r from-[#0C1230] grid grid-cols-5 from-[30%] to-[#343B68] mt-1 h-[84px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
             onTouchStart={tapToggle}
             onTouchEnd={()=>setTapEffect("")}
          >
+            {props.count&&<div className=" absolute top-[-2px] left-[-2px] w-4 h-4 flex rounded-full text-[12px] bg-red-600 text-center">
+
+                    {props.count}
+                
+                </div>}
             <div className="w-[64px] h-[64px]   ">
                 <Image src={props.img} height={45} width={45} alt="Task Image" className="w-[65%]   object-cover " />
             </div>

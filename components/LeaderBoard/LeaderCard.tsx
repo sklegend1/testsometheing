@@ -26,7 +26,7 @@ const LeaderCard = (props:taskProps) => {
         // },50)
     }
     return (
-        <div className={" w-[88vw] snap-start relative mx-auto bg-gradient-to-r from-[#0C1230] flex flex-row items-center from-[30%] to-[#343B68] mt-2 h-[68px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
+        <div className={" w-[88vw]  relative mx-auto bg-gradient-to-r from-[#0C1230] flex flex-row items-center from-[30%] to-[#343B68] mt-2 h-[68px] rounded-xl p-2 border-[#384275] border-2"+tapEffect}
             
          >
             <div className=" text-white font-body text-2xl ml-1 w-10">{props.rank}</div>
