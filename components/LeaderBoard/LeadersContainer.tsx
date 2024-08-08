@@ -1,9 +1,11 @@
+'use client'
 import LeaderCard from "./LeaderCard";
 import LeaderCardRank1 from "./LeaderCardRank1";
 import LeaderCardRank2 from "./LeaderCardRank2";
 import LeaderCardRank3 from "./LeaderCardRank3";
 
 const LeadersContainer = () => {
+    
     return (<div  className=" relative  h-[calc(85vh-250px)] mt-[calc(40vw)]   ">
     <div className=" absolute  scale-105 mt-0 mb-2  mx-auto rounded-xl  w-full">
         <LeaderCard rank={505}
@@ -11,7 +13,7 @@ const LeadersContainer = () => {
         point={75}
         img="/icons/referrals/person1.png"/>
         </div>
-        <div onScroll={(e)=>e.preventDefault()} className=" fixed  top-[calc(40vw+80px)] w-full mt-2 h-[calc(100svh-(40vw+200px))] overflow-y-scroll touch-auto">
+        <div onScroll={(e)=>e.stopPropagation()} className=" fixed  top-[calc(40vw+80px)] w-full mt-2 h-[calc(100svh-(40vw+200px))] overflow-y-scroll touch-auto">
         
             <LeaderCardRank1 rank={1}
         title="Rick Novak"

@@ -1,8 +1,9 @@
+'use client'
 import DetailContainer2 from "./DetailContainer2";
 
 const MyReferrals = () => {
     return (
-        <div onScroll={(e)=>e.preventDefault()} className=" overflow-y-scroll h-[60vh]   ">
+        <div onScroll={(e)=>e.stopPropagation()} className=" overflow-y-scroll h-[60vh]   ">
             <div className=" pt-1 grid text-lg  grid-cols-2">
                     <div>Total Referrals</div>
                     <div className=" font-bold ">12 People</div>
