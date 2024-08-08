@@ -40,7 +40,7 @@ const LeaderCardRank3 = (props:taskProps) => {
                 <div className=" absolute right-3">
                 <div className="  inline-block bg-yellow-600 w-[12px] h-[12px] rounded-full
                  mx-1 shadow-[0px_0px_4px_rgba(200,200,0,0.8)] "></div>
-                 <div className=" inline-block text-white">
+                 <div className=" inline-block text-[4vw] text-white">
                 {props.point} Points</div>
                 </div>
             <div className=" relative  ml-[-5vw]   ">

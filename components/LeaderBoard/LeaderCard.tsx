@@ -34,12 +34,12 @@ const LeaderCard = (props:taskProps) => {
                 <Image src={props.img} height={55} width={55} alt="Task Image" className="w-[55px] h-[55px] rounded-full object-cover " />
             </div>
             
-                <h1 className=" text-white ml-2 w-[38%] text-[3.8vw] font-bold">{props.title}</h1>
+                <h1 className=" text-white   ml-2 w-[25vw] text-[3.8vw] font-bold">{props.title}</h1>
                 
                 <div className=" absolute right-3">
                 <div className="  inline-block bg-yellow-600 w-[12px] h-[12px] rounded-full
                  mx-1 shadow-[0px_0px_4px_rgba(200,200,0,0.8)] "></div>
-                 <div className=" inline-block text-white">
+                 <div className=" inline-block text-[4vw] text-white">
                 {props.point} Points</div>
                 </div>
             <div className=" relative  ml-[-5vw]   ">

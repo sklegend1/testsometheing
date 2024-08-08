@@ -9,10 +9,10 @@ interface LeaderHeaderProps{
 
 const LeaderHeader2 = ( props:LeaderHeaderProps) => {
     return (
-
-        <div className="w-full h-[18vh] relative  flex-col items-end  rounded-[20px_20px]">
+        <div className=" fixed h-[150px]  top-0">
+        <div className="w-full   relative  flex-col items-end   rounded-[20px_20px]">
             <h1 className="  w-[100vw] mt-[2vh]  text-white text-3xl font-bold text-center " >Leader Board</h1>
-            <div className=" mt-[2vh] w-[100vw] mx-auto   ">
+            <div className=" mt-[2vh]  w-[100vw] mx-auto   ">
                 <Image 
                     src="/icons/leaderboard/Banner1.png"
                     width={378}
@@ -21,6 +21,7 @@ const LeaderHeader2 = ( props:LeaderHeaderProps) => {
                     className=" w-[95vw] mx-auto rounded-xl"
                 />
             </div>
+        </div>
         </div>
     );
 }

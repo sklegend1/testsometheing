@@ -3,9 +3,9 @@ import { DocumentDuplicateIcon } from "@heroicons/react/24/outline";
 const InviteButton = () => {
     return (
         <div>
-        <div className=" mt-2  h-[5vh] relative ">
-            <button className=" bg-[#029E80] absolute left-0 w-[86%] h-[5vh] py-1 rounded-lg font-bold text-lg ">Invite Friend</button>
-            <button className=" mx-2 bg-[#029E80] w-[12%] absolute left-[86%] py-1 h-[5vh] rounded-lg font-bold text-lg ">
+        <div className=" mt-2  h-[40px] relative ">
+            <button className=" bg-[#029E80] absolute left-0 w-[86%] h-[35px] py-1 rounded-lg font-bold text-lg ">Invite Friend</button>
+            <button className=" mx-2 bg-[#029E80] w-[12%] absolute left-[86%] py-1 h-[35px] rounded-lg font-bold text-lg ">
                 <DocumentDuplicateIcon className=" w-[8vw] mx-auto" />
             </button>
             
