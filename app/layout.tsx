@@ -36,7 +36,7 @@ export default async function RootLayout({
   return (
     <TgProvider>
     <html lang={locale}>
-      <body className=" font-sans bg-[#0B1124] mb-[120px] overflow-hidden " style={bodyStyle}>
+      <body className=" font-sans bg-[#0B1124] mb-[120px]  " style={bodyStyle}>
         <LocaleProvider>
         <NextIntlClientProvider messages={messages}>
           <WalletProvider>

@@ -2,7 +2,7 @@ import DetailContainer2 from "./DetailContainer2";
 
 const MyReferrals = () => {
     return (
-        <div className=" ">
+        <div className=" overflow-y-scroll h-[60vh]  ">
             <div className=" pt-1 grid text-lg  grid-cols-2">
                     <div>Total Referrals</div>
                     <div className=" font-bold ">12 People</div>
@@ -28,7 +28,7 @@ const MyReferrals = () => {
                 </div>
 
                 {/* <hr className=" my-2 border-gray-600"/> */}
-                <DetailContainer2 />
+                {/* <DetailContainer2 /> */}
         </div>
     );
 }
