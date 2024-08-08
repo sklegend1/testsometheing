@@ -1,7 +1,7 @@
 import ReferralCard from "./ReferralCard";
 const ReferralContainer = () => {
   return (
-    <div className=" overflow-y-scroll snap-y h-[60vh]">
+    <div className=" overflow-y-scroll  h-[60vh]">
       <ReferralCard
         friend={52}
         title="Rick Novak"
