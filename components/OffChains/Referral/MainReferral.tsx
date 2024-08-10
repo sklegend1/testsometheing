@@ -39,7 +39,7 @@ const MainReferral = (props:RefProps) => {
                     >More Details</button>
                 
             </div>
-            <div className="overflow-y-scroll   p-3 ">
+            <div className="  p-3 ">
                 {isMoreDetails==1?<ReferralContainer />:(isMoreDetails==2?<DetailContainer />:<MyReferrals />)}
 
             </div>

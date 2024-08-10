@@ -2,7 +2,7 @@
 import ReferralCard from "./ReferralCard";
 const ReferralContainer = () => {
   return (
-    <div onScroll={(e)=>e.preventDefault()} className=" overflow-y-scroll  h-[60vh]">
+    <div onScroll={(e)=>e.preventDefault()} className=" overflow-y-scroll overscroll-contain  h-[60vh]">
       <ReferralCard
         friend={52}
         title="Rick Novak"

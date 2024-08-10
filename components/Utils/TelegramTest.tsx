@@ -36,21 +36,21 @@ const TelegramTest = () => {
     
     const rawInit = WebApp.initData
 
-    useEffect(()=>{
-    if((window as any).Telegram){
-      try{
-      const webAppObj = (window as any).Telegram.WebApp
-      webAppObj.showPopup({message:webAppObj.version})
-      const photos = webAppObj.getUserProfilePhotos(initData?.id)
-      webAppObj.showPopup({message:JSON.stringify(photos)})
-    }
-      catch(error){
-        alert(error)
-      }
-    }
+    // useEffect(()=>{
+    // if((window as any).Telegram){
+    //   try{
+    //   const webAppObj = (window as any).Telegram.WebApp
+    //   webAppObj.showPopup({message:webAppObj.version})
+    //   const photos = webAppObj.getUserProfilePhotos(initData?.id)
+    //   webAppObj.showPopup({message:JSON.stringify(photos)})
+    // }
+    //   catch(error){
+    //     alert(error)
+    //   }
+    // }
 
     
-    },[])
+    // },[])
     
     const handleOpen = () => {
     
