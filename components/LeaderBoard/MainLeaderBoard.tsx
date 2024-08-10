@@ -1,9 +1,19 @@
+'use client'
 import LeaderHeader from "./LeaderHeader";
 import LeadersContainer from "./LeadersContainer";
 import LeaderHeader2 from "./LeaderHeader2";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const MainLeaderBoard = () => {
+    useEffect(()=>{
+        function preventCollapse() {
+            if (window.scrollY === 0) {
+              window.scrollTo(0, 1);
+            }
+          }
+          preventCollapse()
+    },[])
     return (
         <div className=" overflow-hidden flex flex-col">
             <div>

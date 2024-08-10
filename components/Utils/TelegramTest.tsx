@@ -104,6 +104,9 @@ const TelegramTest = () => {
     }
     // const telegramBgColor = WebApp.themeParams.button_color
     
+    // const getPhoto = async ()=>{
+    //   const res = fetch("https://api.telegram.org/bot<token>/getUserProfilePhotos")
+    // }
     
     return (
         <div className=" mt-3  w-full text-center">
