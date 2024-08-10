@@ -38,9 +38,15 @@ const TelegramTest = () => {
 
     useEffect(()=>{
     if((window as any).Telegram){
+      try{
       const webAppObj = (window as any).Telegram.WebApp
       webAppObj.showPopup({message:webAppObj.version})
       webAppObj.disableVerticalSwipes()}
+      catch(error){
+        alert(error)
+      }
+    }
+
     
     },[])
     
