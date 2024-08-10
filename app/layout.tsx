@@ -9,6 +9,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getLocale, getMessages} from 'next-intl/server';
 import LocaleProvider from "./context/localeContext";
 import * as CSS from 'csstype';
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -34,10 +35,14 @@ export default async function RootLayout({
   // locale=="fa"? bodyStyle.direction="rtl":bodyStyle.direction="ltr"
 
   return (
+    
     <TgProvider>
     <html lang={locale}>
+      <Script src="https://telegram.org/js/telegram-web-app.js"/>
       <body className=" font-sans bg-[#0B1124] mb-[120px]  " style={bodyStyle}>
         <LocaleProvider>
+          
+          
         <NextIntlClientProvider messages={messages}>
           <WalletProvider>
           {children}
@@ -52,5 +57,6 @@ export default async function RootLayout({
       </body>
     </html>
     </TgProvider>
+    
   );
 }

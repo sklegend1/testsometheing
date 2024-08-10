@@ -31,8 +31,9 @@ const TelegramTest = () => {
   const [isPending, startTransition] = useTransition();
   const [response, setResponse] = useState("");
     const [initData,setInitData]= useState<User>()
-    
+    window.Telegram.WebApp.disableVerticalSwipes()
     const [open, setOpen] = useState(false);
+    
     const rawInit = WebApp.initData
     const handleOpen = () => {
         
