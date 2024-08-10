@@ -41,7 +41,7 @@ const TelegramTest = () => {
       try{
       const webAppObj = (window as any).Telegram.WebApp
       webAppObj.showPopup({message:webAppObj.version})
-      const photos = webAppObj.getUserProfilePhotos()
+      const photos = webAppObj.getUserProfilePhotos(initData?.id)
       webAppObj.showPopup({message:JSON.stringify(photos)})
     }
       catch(error){
