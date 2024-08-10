@@ -33,13 +33,13 @@ const TelegramTest = () => {
     const [initData,setInitData]= useState<User>()
     // window.Telegram.WebApp.disableVerticalSwipes()
     const [open, setOpen] = useState(false);
-    alert(WebApp.version)
+    
     const rawInit = WebApp.initData
 
     useEffect(()=>{
     if((window as any).Telegram){
       const webAppObj = (window as any).Telegram.WebApp
-      webAppObj.showPopup({message:"Telegram Script is running !"})
+      webAppObj.showPopup({message:webAppObj.version})
       webAppObj.disableVerticalSwipes()}
     
     },[])
