@@ -15,7 +15,7 @@ const MainLeaderBoard = () => {
     //       preventCollapse()
     // },[])
     return (
-        <div className=" overflow-hidden flex flex-col touch-none">
+        <div className=" overflow-hidden flex flex-col">
             <div>
             <LeaderHeader2 img1="/icons/referrals/person1.png" img2="/icons/referrals/person2.png" img3="/icons/referrals/person3.png" />
             </div>
