@@ -10,6 +10,7 @@ import {getLocale, getMessages} from 'next-intl/server';
 import LocaleProvider from "./context/localeContext";
 import * as CSS from 'csstype';
 import Script from "next/script";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,9 +39,12 @@ export default async function RootLayout({
     
     <TgProvider>
     <html lang={locale}>
-      <head><Script src="https://telegram.org/js/telegram-web-app.js">
-      {"window.Telegram.WebApp.disableVerticalSwipes()"}
-      </Script></head>
+      
+      <Head>
+        <script async src="https://telegram.org/js/telegram-web-app.js" />
+      </Head>
+      
+      
       {/*  */}
       <body className=" font-sans bg-[#0B1124] mb-[120px]  " style={bodyStyle}>
         <LocaleProvider>

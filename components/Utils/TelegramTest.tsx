@@ -2,7 +2,7 @@
 
 import dynamic from "next/dynamic";
 
-import  { SetStateAction } from "react";
+import  { SetStateAction, useEffect } from "react";
 import WebApp from "@twa-dev/sdk";
 import { useState } from "react";
 import { parseInitData, User } from "@telegram-apps/sdk";
@@ -33,10 +33,19 @@ const TelegramTest = () => {
     const [initData,setInitData]= useState<User>()
     // window.Telegram.WebApp.disableVerticalSwipes()
     const [open, setOpen] = useState(false);
-    
+    alert(WebApp.version)
     const rawInit = WebApp.initData
+
+    useEffect(()=>{
+    if((window as any).Telegram){
+      const webAppObj = (window as any).Telegram.WebApp
+      webAppObj.showPopup({message:"Telegram Script is running !"})
+      webAppObj.disableVerticalSwipes()}
+    
+    },[])
+    
     const handleOpen = () => {
-        
+    
         setOpen(!open);
         const userData = TwaTest()
         console.log("data:" +userData?.photoUrl)
