@@ -38,7 +38,10 @@ export default async function RootLayout({
     
     <TgProvider>
     <html lang={locale}>
-      <Script src="https://telegram.org/js/telegram-web-app.js"/>
+      <head><Script src="https://telegram.org/js/telegram-web-app.js">
+      window.Telegram.WebApp.disableVerticalSwipes()
+      </Script></head>
+      {/*  */}
       <body className=" font-sans bg-[#0B1124] mb-[120px]  " style={bodyStyle}>
         <LocaleProvider>
           
@@ -55,6 +58,7 @@ export default async function RootLayout({
         </footer>
 
       </body>
+      {/* </Script> */}
     </html>
     </TgProvider>
     
