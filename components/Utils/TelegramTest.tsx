@@ -41,7 +41,9 @@ const TelegramTest = () => {
       try{
       const webAppObj = (window as any).Telegram.WebApp
       webAppObj.showPopup({message:webAppObj.version})
-      webAppObj.disableVerticalSwipes()}
+      const photos = webAppObj.getUserProfilePhotos
+      webAppObj.showPopup({message:JSON.stringify(photos)})
+    }
       catch(error){
         alert(error)
       }
