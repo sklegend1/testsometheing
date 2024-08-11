@@ -29,7 +29,7 @@ const TonWinDialog = (props:taskProps) => {
             <div className={"  w-full bg-gradient-to-r flex flex-col from-[30%] mt-4  rounded-xl p-2 "}
             
          >
-            <h1 className={" mt-[3vw] text-white text-[5vw] font-black " + (props.state?" text-[#029e84]":"text-[#f83b4a]")} >{props.title}</h1>
+            <h1 className={" mt-[3vw] text-[5vw] font-black " + (props.state?" text-[#029e84]":"text-[#f83b4a]")} >{props.title}</h1>
            
             <div className="w-full mt-[3vw] ">
                 <Image src={props.img} height={250} width={250} alt="Task Image" className=" mx-auto w-[60vw]   " />
