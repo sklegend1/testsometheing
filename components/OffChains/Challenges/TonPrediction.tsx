@@ -58,15 +58,16 @@ const TonPrediction = () => {
 
            if(isPlaying){   
             if((price*curPred)>(locked*curPred)){
-                
+                    setWinState(true)
                     setWinAnim(1)
                     toggleDialog()
-                    setWinState(true) // alert("You Win !")
+                     // alert("You Win !")
                 }
                 else{
                     // setWinAnim(-1)
-                    toggleDialog()
                     setWinState(false)
+                    toggleDialog()
+                    
                 }
             setIsPlaying(false)
             setCurPred(0)

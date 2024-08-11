@@ -17,7 +17,7 @@ const CountDown = (props:CountDownProps) => {
                     <CoinContainer  img="/icons/referrals/ton.png" name="TON/USDT"  />
                 </div>
                 <div className=" text-right  ">
-                    <CoinContainer  img="/icons/tonpred/time.png" name={props.dValue.toString()}  />
+                    <CoinContainer  img="/icons/tonpred/Time.png" name={props.dValue.toString()}  />
                 </div>
             </div>
             
