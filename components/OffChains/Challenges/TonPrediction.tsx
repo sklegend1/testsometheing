@@ -94,7 +94,7 @@ const TonPrediction = () => {
             <CountDown pValue={timeLeft*100/roundTime} dValue={timeLeft} />
             <br/>
         <PredMonitor lockedPrice={locked.toPrecision(4)} price={price.toPrecision(4)} state={curPred }
-            bgImg={isPlaying?(curPred==-1?"/icons/tonpred/down.png":"/icons/tonpred/up.png"):"/icons/tonpred/off.png"} />
+            bgImg={isPlaying?(curPred==-1?"/icons/tonpred/down.png":"/icons/tonpred/up.png"):"/icons/tonpred/off2.png"} />
 
             <div className="text-center text-white text-[4vw] font-bold mt-[8vw]" >Choose your option for Next Round!</div>
             {isWaiting&&<div className=" w-[70vw] mx-auto grid grid-cols-2 mb-[1vw] mt-[3vw]  ">
