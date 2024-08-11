@@ -49,5 +49,14 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+
+.imgdropred img{
+
+  filter:drop-shadow(0px 5px 5px rgba(255, 0, 0, 0.3));
+}
+.imgdropgreen img{
+
+  filter:drop-shadow(0px -5px 5px rgba(0, 255, 128, 0.3));
+}
   
   

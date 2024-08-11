@@ -42,6 +42,7 @@ export default async function RootLayout({
       
       <Head>
         <script async src="https://telegram.org/js/telegram-web-app.js" />
+        <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"/>
       </Head>
       
       

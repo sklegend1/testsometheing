@@ -10,7 +10,7 @@ const OffchainsContainer = () => {
         <div className=" w-[92%] mx-auto mt-5  text-white px-0  text-lg ">
             <h2 className="ml-2 ">{t("OffTitle")}</h2>
             <div className=" w-full mx-auto flex flex-wrap gap-1    ">
-                <OffchainItemCard title={t('Challenges')} description={t('ChallengesDes')} image={cardProps[0].image} link="/" />
+                <OffchainItemCard title={t('Challenges')} description={t('ChallengesDes')} image={cardProps[0].image} link="/challenges/tonprice" />
                 <OffchainItemCard title={t('Tasks')} description={t('TasksDes')} image={cardProps[1].image} link="/tasks" />
                 <OffchainItemCard title={t('Refferals')} description={t('RefferalsDes')} image={cardProps[2].image} link="/referral" />
                 <OffchainItemCard title={t('Manual')} description={t('ManualDes')} image={cardProps[3].image} link="/" />
