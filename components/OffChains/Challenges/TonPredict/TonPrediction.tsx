@@ -41,7 +41,7 @@ const TonPrediction = () => {
             container: (document.getElementById("PredTonWin") as Element), // the dom element that will contain the animation
             renderer: 'svg',
             loop: false,
-            autoplay: false,
+            autoplay: true,
             path: '/winanim.json', // the path to the animation json
             name:"winning",
             
@@ -49,9 +49,9 @@ const TonPrediction = () => {
 
         //anim.setSpeed(3)
 
-        anim.addEventListener("complete",()=>{
-            setIsPlay(false)
-        })
+        // anim.addEventListener("complete",()=>{
+        //     setIsPlay(false)
+        // })
           
         const timeOut = setTimeout(() => {
             setTimeLeft(timeLeft-1)
@@ -97,11 +97,11 @@ const TonPrediction = () => {
     return (
         <div className="lottie w-[100vw] text-center relative">
             {
-                <div id="damnParrent" className={"absolute z-10 " + (isPlay?" w-[100vw] h-[100vh]":" w-0 h-0")}>
-                    <div   id="PredTonWin"  className={"    w-full h-full " + (WinAnim?" ":" ")} >
+                
+                    WinAnim&&<div   id="PredTonWin"  className={"  absolute z-10  w-[100vw] h-[100vh] " + (WinAnim?" ":" ")} >
                     {/* <div className="fixed left-[15vw] text-white bg-green-800 mt-[50vw] text-[8vw] flex items-center w-[70vw] h-[30vw] rounded-lg bg-opacity-60 mx-auto font-bold justify-center"> You Won<br/>30 Points !</div> */}
                     </div>
-                </div>
+                
                 }
 
               
