@@ -1,6 +1,6 @@
 'use client'
 import { Progress } from "@material-tailwind/react";
-import ScoreContainer from "../Referral/ScoreContainer";
+
 import CoinContainer from "./CoinContainer";
 import { number } from "@telegram-apps/sdk";
 interface CountDownProps{
