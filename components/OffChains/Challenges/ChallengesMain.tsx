@@ -15,10 +15,10 @@ const ChallengesMain = () => {
         />
       </div>
       <div className=" w-[85vw] mt-[6vw] mx-auto ">
-        <h1 className=" text-white font-bold  text-xl  ">
+        <h1 className=" text-white font-bold  text-xl   ">
           Take on challenges to earn more points!
         </h1>
-        <p className=" text-gray-400 mt-[2vw]  text-sm w-[95%] text-justify   ">
+        <p className=" text-gray-400 mt-[2vw]  text-sm w-full text-justify   ">
           Challenges help you earn more points and prepare for our main WEB3
           game's token Airdrop! Don't forget to check the leaderboard, where
           fantastic prizes await you!
