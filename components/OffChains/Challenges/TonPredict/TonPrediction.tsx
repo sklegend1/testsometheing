@@ -20,6 +20,7 @@ const TonPrediction = () => {
     const [WinAnim,setWinAnim]= useState(false)
     const [isDialog,setIsDialog] = useState(false)
     const [winState,setWinState] = useState(false)
+    const [isPlay,setIsPlay] = useState(false)
     const toggleDialog=()=>{
         setIsDialog(!isDialog)
     }
@@ -39,18 +40,25 @@ const TonPrediction = () => {
         const anim = Lottie.loadAnimation({
             container: (document.getElementById("PredTonWin") as Element), // the dom element that will contain the animation
             renderer: 'svg',
-            loop: 1,
+            loop: false,
             autoplay: false,
             path: '/winanim.json', // the path to the animation json
-            name:"winning"
+            name:"winning",
+            
           });
+
+        //anim.setSpeed(3)
+
+        anim.addEventListener("complete",()=>{
+            setIsPlay(false)
+        })
           
         const timeOut = setTimeout(() => {
             setTimeLeft(timeLeft-1)
         }, 1000);
         if(timeLeft<roundTime-2){
             setWinAnim(false)
-            Lottie.stop("winning")
+            // Lottie.stop("winning")
         }
         if(timeLeft<1){
             
@@ -62,7 +70,7 @@ const TonPrediction = () => {
             if((price*curPred)>(locked*curPred)){
                     setWinState(true)
                     setWinAnim(true)
-                    Lottie.play("winning")
+                    // Lottie.play("winning")
                     toggleDialog()
                      // alert("You Win !")
                 }
@@ -88,9 +96,13 @@ const TonPrediction = () => {
 
     return (
         <div className="lottie w-[100vw] text-center relative">
-            <div id="PredTonWin"  className={" absolute z-10 w-full h-ful  " + (!WinAnim&&" hidden")} >
-                {/* <div className="fixed left-[15vw] text-white bg-green-800 mt-[50vw] text-[8vw] flex items-center w-[70vw] h-[30vw] rounded-lg bg-opacity-60 mx-auto font-bold justify-center"> You Won<br/>30 Points !</div> */}
+            {
+                <div id="damnParrent" className={"absolute z-10 " + (isPlay?" w-[100vw] h-[100vh]":" w-0 h-0")}>
+                    <div   id="PredTonWin"  className={"    w-full h-full " + (WinAnim?" ":" ")} >
+                    {/* <div className="fixed left-[15vw] text-white bg-green-800 mt-[50vw] text-[8vw] flex items-center w-[70vw] h-[30vw] rounded-lg bg-opacity-60 mx-auto font-bold justify-center"> You Won<br/>30 Points !</div> */}
+                    </div>
                 </div>
+                }
 
               
 
@@ -99,7 +111,7 @@ const TonPrediction = () => {
         <PredMonitor lockedPrice={locked.toPrecision(4)} price={price.toPrecision(4)} state={curPred }
             bgImg={isPlaying?(curPred==-1?"/icons/tonpred/down.png":"/icons/tonpred/up.png"):"/icons/tonpred/off2.png"} />
 
-            <div className="text-center text-white text-[4vw] font-bold mt-[8vw]" >Choose your option for Next Round!</div>
+            <div onClick={()=>{setIsPlay(true);Lottie.stop("winning"); Lottie.play("winning")}} className="text-center text-white text-[4vw] font-bold mt-[8vw]" >Choose your option for Next Round!</div>
             {isWaiting&&<div className=" w-[70vw] mx-auto grid grid-cols-2 mb-[1vw] mt-[3vw]  ">
                 <div className=" text-left text-white text-[4vw] ">
                     Your Next Position :
