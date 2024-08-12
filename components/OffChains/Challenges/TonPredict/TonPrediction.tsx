@@ -56,6 +56,9 @@ const TonPrediction = () => {
         const timeOut = setTimeout(() => {
             setTimeLeft(timeLeft-1)
         }, 1000);
+        if(WinAnim){
+            
+        }
         if(timeLeft<roundTime-2){
             setWinAnim(false)
             // Lottie.stop("winning")
