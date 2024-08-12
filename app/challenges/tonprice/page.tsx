@@ -1,4 +1,4 @@
-import TonPrediction from "@/components/OffChains/Challenges/TonPrediction";
+import TonPrediction from "@/components/OffChains/Challenges/TonPredict/TonPrediction";
 
 const page = () => {
     return (

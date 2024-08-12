@@ -17,7 +17,7 @@ const TonPrediction = () => {
     const [curPred,setCurPred] = useState(0)
     const [timeLeft,setTimeLeft] = useState(roundTime)
     const [isPlaying,setIsPlaying] = useState(false)
-    const [WinAnim,setWinAnim]= useState(0)
+    const [WinAnim,setWinAnim]= useState(false)
     const [isDialog,setIsDialog] = useState(false)
     const [winState,setWinState] = useState(false)
     const toggleDialog=()=>{
@@ -40,15 +40,17 @@ const TonPrediction = () => {
             container: (document.getElementById("PredTonWin") as Element), // the dom element that will contain the animation
             renderer: 'svg',
             loop: 1,
-            autoplay: true,
-            path: '/winanim.json' // the path to the animation json
+            autoplay: false,
+            path: '/winanim.json', // the path to the animation json
+            name:"winning"
           });
           
         const timeOut = setTimeout(() => {
             setTimeLeft(timeLeft-1)
         }, 1000);
         if(timeLeft<roundTime-2){
-            setWinAnim(0)
+            setWinAnim(false)
+            Lottie.stop("winning")
         }
         if(timeLeft<1){
             
@@ -59,7 +61,8 @@ const TonPrediction = () => {
            if(isPlaying){   
             if((price*curPred)>(locked*curPred)){
                     setWinState(true)
-                    setWinAnim(1)
+                    setWinAnim(true)
+                    Lottie.play("winning")
                     toggleDialog()
                      // alert("You Win !")
                 }
@@ -85,9 +88,9 @@ const TonPrediction = () => {
 
     return (
         <div className="lottie w-[100vw] text-center relative">
-            {WinAnim==1&&<div id="PredTonWin"  className=" absolute z-10 w-full h-ful">
+            <div id="PredTonWin"  className={" absolute z-10 w-full h-ful  " + (!WinAnim&&" hidden")} >
                 {/* <div className="fixed left-[15vw] text-white bg-green-800 mt-[50vw] text-[8vw] flex items-center w-[70vw] h-[30vw] rounded-lg bg-opacity-60 mx-auto font-bold justify-center"> You Won<br/>30 Points !</div> */}
-                </div>}
+                </div>
 
               
 
