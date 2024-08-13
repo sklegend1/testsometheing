@@ -44,7 +44,7 @@ const TonPriceSocket = () => {
                 return;
               }
               const data = JSON.parse(strFromU8(raw));
-              console.log("raw Data : "+JSON.stringify(data))
+            //   console.log("raw Data : "+JSON.stringify(data))
               // Use the data variable however you wish
               if (data.method === 'state.update' ) {
                     const marketData = data.data.state_list[0];

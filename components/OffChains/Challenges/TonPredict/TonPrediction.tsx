@@ -5,6 +5,7 @@ import PredMonitor from "./PredMonitor";
 import Lottie from "lottie-web";
 import TonWinDialog from "./TonWinDialog";
 import { TonContext } from "@/app/context/tonContext";
+import TonPriceSocket from "@/components/Utils/TonPriceSocket";
 
 
 const losedesc = "Oops! Looks like you took a wrong turn at the crossroads of destiny. But hey, nobody's perfect, right? Try again, hero! Your next adventure awaits!"
@@ -110,6 +111,7 @@ const TonPrediction = () => {
 
     return (
         <div className="lottie w-[100vw] text-center relative">
+            <TonPriceSocket />
             {
                 
                     WinAnim&&<div   id="PredTonWin"  className={"  absolute z-10  w-[100vw] h-[100vh] " + (WinAnim?" ":" ")} >

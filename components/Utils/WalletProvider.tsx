@@ -8,7 +8,7 @@ const WalletProvider = ({
     children: React.ReactNode;
   }) =>{
     return (
-      <TonConnectUIProvider manifestUrl= {process.env.HOME_URL +"tonconnect-manifest.json"}
+      <TonConnectUIProvider manifestUrl= {process.env.NEXT_PUBLIC_BASE_URL +"tonconnect-manifest.json"}
       walletsListConfiguration={{
         includeWallets: [
           {
@@ -25,7 +25,7 @@ const WalletProvider = ({
         ]
       }}
       actionsConfiguration={{
-        twaReturnUrl: 'https://t.me/testformoonappbot/Pixi'
+        twaReturnUrl: (process.env.NEXT_PUBLIC_TELEGRAM_URL as `${string}://${string}`)
       }}
       >
       
