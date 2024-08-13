@@ -11,6 +11,8 @@ import LocaleProvider from "./context/localeContext";
 import * as CSS from 'csstype';
 import Script from "next/script";
 import Head from "next/head";
+import TonProvider from "./context/tonContext";
+import TonPriceSocket from "@/components/Utils/TonPriceSocket";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -36,7 +38,7 @@ export default async function RootLayout({
   // locale=="fa"? bodyStyle.direction="rtl":bodyStyle.direction="ltr"
 
   return (
-    
+    <TonProvider >
     <TgProvider>
     <html lang={locale}>
       
@@ -55,17 +57,18 @@ export default async function RootLayout({
           <WalletProvider>
           {children}
           </WalletProvider>
-        </NextIntlClientProvider>
-        </LocaleProvider>
+        
         <footer>
           <FooterNav />
-
+          <TonPriceSocket />
         </footer>
-
+</NextIntlClientProvider>
+        </LocaleProvider>
       </body>
       {/* </Script> */}
     </html>
     </TgProvider>
+    </TonProvider>
     
   );
 }

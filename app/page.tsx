@@ -13,6 +13,7 @@ import TestGetFetch from "@/components/Utils/TestGetFetch";
 import LocaleSwitcher from "@/components/Intl/LocaleSwitcher";
 const TelegramTest = dynamic(()=> import("@/components/Utils/TelegramTest"),{ssr:false})
 import { cookies } from "next/headers";
+import TonPriceSocket from "@/components/Utils/TonPriceSocket";
 
 export default function Home() {
   
@@ -30,6 +31,7 @@ export default function Home() {
       <OnchainsContainer />
       <TelegramTest />
       {/* <TestGetFetch /> */}
+      <TonPriceSocket />
       
     </main>
   );

@@ -1,9 +1,10 @@
 'use client'
-import { useState,useEffect } from "react";
+import { useState,useEffect,useContext } from "react";
 import CountDown from "./CountDown";
 import PredMonitor from "./PredMonitor";
 import Lottie from "lottie-web";
 import TonWinDialog from "./TonWinDialog";
+import { TonContext } from "@/app/context/tonContext";
 
 
 const losedesc = "Oops! Looks like you took a wrong turn at the crossroads of destiny. But hey, nobody's perfect, right? Try again, hero! Your next adventure awaits!"
@@ -21,6 +22,7 @@ const TonPrediction = () => {
     const [isDialog,setIsDialog] = useState(false)
     const [winState,setWinState] = useState(false)
     const [isPlay,setIsPlay] = useState(false)
+    const {tonPrice,setTonPrice} = useContext(TonContext)
     const toggleDialog=()=>{
         setIsDialog(!isDialog)
     }
@@ -28,13 +30,22 @@ const TonPrediction = () => {
         //Implementing the setInterval method
         const interval = setInterval(() => {
             let fakeprice = Math.random()-0.5 
-            setPrice(fakeprice+6);
+            //setPrice(fakeprice+6);
         }, 1000);
  
         //Clearing the interval
         return () => clearInterval(interval);
     }, []);
-
+    useEffect(()=>{
+        async function getTonPrice() {
+            const response = await fetch('https://tonapi.io/v2/rates?tokens=ton&currencies=usd');
+            const data = await response.json();
+            setPrice( data.rates.TON.prices.USD)
+        }
+        // getTonPrice()
+        setPrice(tonPrice)
+        
+    },[timeLeft])
     useEffect(()=>{
 
         const anim = Lottie.loadAnimation({
@@ -67,7 +78,7 @@ const TonPrediction = () => {
             
                
             setTimeLeft(roundTime)
-            setLocked(price)
+            setLocked(tonPrice)
 
            if(isPlaying){   
             if((price*curPred)>(locked*curPred)){
@@ -111,7 +122,7 @@ const TonPrediction = () => {
 
             <CountDown pValue={timeLeft*100/roundTime} dValue={timeLeft} />
             <br/>
-        <PredMonitor lockedPrice={locked.toPrecision(4)} price={price.toPrecision(4)} state={curPred }
+        <PredMonitor lockedPrice={(locked as number ).toString()} price={(tonPrice as number ).toString()} state={curPred }
             bgImg={isPlaying?(curPred==-1?"/icons/tonpred/down.png":"/icons/tonpred/up.png"):"/icons/tonpred/off2.png"} />
 
             <div onClick={()=>{setIsPlay(true);Lottie.stop("winning"); Lottie.play("winning")}} className="text-center text-white text-[4vw] font-bold mt-[8vw]" >Choose your option for Next Round!</div>
